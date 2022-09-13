@@ -8,14 +8,14 @@ interface NameProps {
 }
 
 const HelloWorld = (props: NameProps) => {
-  const [shit, setShit] = useState<NameProps | null>(null);
+  const [name, setName] = useState<NameProps | null>(null);
 
   function handleClick() {
-    setShit({ value: "AARA AMUTHAN" });
+    setName({ value: "AK" });
   }
   return (
     <div>
-      Hello &emsp;<strong>{shit?.value}</strong>
+      Hello &emsp;<strong>{name?.value}</strong>
       <button onClick={handleClick}>Name</button>
     </div>
   );
