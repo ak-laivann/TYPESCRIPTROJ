@@ -1,0 +1,23 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: linear-gradient(135deg, red, yellow, orangered);
+  font-style: oblique;
+}
+
+strong {
+  color: blue;
+  font-size: xx-large;
+}
+
+button {
+  display: block;
+  width: 100%;
+  height: 5vh;
+}
+
+button:active {
+  transform: scale(0.93);
+}
