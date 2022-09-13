@@ -3,8 +3,10 @@ import React from "react";
 import { useState } from "react";
 import "./HelloWorld.css";
 
-interface NameProps {
+export interface NameProps {
   value?: string;
+  color?: string;
+  children?: string;
 }
 
 const HelloWorld = (props: NameProps) => {
@@ -14,9 +16,9 @@ const HelloWorld = (props: NameProps) => {
     setName({ value: "AK" });
   }
   return (
-    <div>
+    <div className={props.color} style={{ backgroundColor: props.color }}>
       Hello &emsp;<strong>{name?.value}</strong>
-      <button onClick={handleClick}>Name</button>
+      <button onClick={handleClick}>{props.children}</button>
     </div>
   );
 };
