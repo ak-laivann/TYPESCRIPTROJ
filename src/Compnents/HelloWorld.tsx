@@ -21,7 +21,7 @@ const HelloWorld = (props: NameProps) => {
         Hello<strong>{name?.value}</strong>
       </p>
       <button role="button" onClick={handleClick}>
-        chuma {props.children}
+        {props.children}
       </button>
     </div>
   );

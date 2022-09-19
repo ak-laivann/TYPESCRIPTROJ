@@ -6,10 +6,7 @@ import { NameProps } from "./Compnents/HelloWorld";
 function App(props: NameProps) {
   return (
     <div className="App">
-      <HelloWorld
-      // color=" " value={props.value}
-      // children="summa"
-      />
+      <HelloWorld color=" " value={props.value} children="summa" />
     </div>
   );
 }

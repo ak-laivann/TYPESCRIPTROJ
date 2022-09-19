@@ -17,9 +17,13 @@ import HelloWorld from "./HelloWorld";
 test("button functionality test", () => {
   const { container } = render(<HelloWorld />);
 
-  const [button] = container.querySelectorAll("button");
+  const button = screen.getByRole(
+    "button"
+    // { name: "summa" }
+  );
   // console.log(document.body.innerHTML);
   const message = container.querySelector("p");
+  expect(message?.textContent).toBe("Hello");
   fireEvent.click(button);
   // console.log(message?.textContent);
   expect(message?.textContent).toBe("HelloAK");
