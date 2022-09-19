@@ -14,12 +14,13 @@ import HelloWorld from "./HelloWorld";
 // //   expect(helloWorld).toBeInTheDocument();
 // // });
 
-test("functionality test", () => {
-  const onClick = jest.fn();
-  const temp = render(<HelloWorld onClick={onClick} children="summa" />);
-  //   console.log(temp);
-  const buttonElement = screen.getByRole("button");
-  // console.log(buttonElement);
-  fireEvent.click(buttonElement);
-  expect(temp).toBeCalled();
+test("button functionality test", () => {
+  const { container } = render(<HelloWorld />);
+
+  const [button] = container.querySelectorAll("button");
+  // console.log(document.body.innerHTML);
+  const message = container.querySelector("p");
+  fireEvent.click(button);
+  // console.log(message?.textContent);
+  expect(message?.textContent).toBe("HelloAK");
 });

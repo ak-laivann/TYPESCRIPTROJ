@@ -7,8 +7,8 @@ function App(props: NameProps) {
   return (
     <div className="App">
       <HelloWorld
-        // color=" " value={props.value}
-        children="summa"
+      // color=" " value={props.value}
+      // children="summa"
       />
     </div>
   );

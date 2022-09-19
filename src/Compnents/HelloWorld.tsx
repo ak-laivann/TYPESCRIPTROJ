@@ -3,8 +3,8 @@ import { useState } from "react";
 import "./HelloWorld.css";
 
 export interface NameProps {
-  // value?: string;
-  // color?: string;
+  value?: string;
+  color?: string;
   children?: string;
   onClick?: any;
 }
@@ -13,15 +13,15 @@ const HelloWorld = (props: NameProps) => {
   const [name, setName] = useState<NameProps | null>(null);
 
   function handleClick() {
-    // setName({ value: "AK" });
+    setName({ value: "AK" });
   }
   return (
-    <div
-    // className={props.color} style={{ backgroundColor: props.color }}
-    >
-      {/* Hello &emsp;<strong>{name?.value}</strong> */}
+    <div className={props.color} style={{ backgroundColor: props.color }}>
+      <p className="p">
+        Hello<strong>{name?.value}</strong>
+      </p>
       <button role="button" onClick={handleClick}>
-        {props.children}
+        chuma {props.children}
       </button>
     </div>
   );
